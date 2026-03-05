@@ -1,0 +1,74 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --radius: 0.625rem;
+}
+
+@theme inline {
+  --font-sans: 'Inter', 'Inter Fallback';
+  --font-serif: 'Playfair Display', 'Georgia', serif;
+  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+
+  --color-background: #FFF8F2;
+  --color-foreground: #3E1F0F;
+  --color-card: #FFFFFF;
+  --color-card-foreground: #3E1F0F;
+  --color-popover: #FFFFFF;
+  --color-popover-foreground: #3E1F0F;
+  --color-primary: #9A5A2E;
+  --color-primary-foreground: #FFFFFF;
+  --color-secondary: #FFF1E8;
+  --color-secondary-foreground: #3E1F0F;
+  --color-muted: #FFF1E8;
+  --color-muted-foreground: #7A5A42;
+  --color-accent: #D39A6A;
+  --color-accent-foreground: #3E1F0F;
+  --color-destructive: #dc2626;
+  --color-destructive-foreground: #dc2626;
+  --color-border: #E8D5C4;
+  --color-input: #E8D5C4;
+  --color-ring: #D39A6A;
+
+  --color-chart-1: #9A5A2E;
+  --color-chart-2: #D39A6A;
+  --color-chart-3: #3E1F0F;
+  --color-chart-4: #C47D4A;
+  --color-chart-5: #B8845C;
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  --color-sidebar: #FFF8F2;
+  --color-sidebar-foreground: #3E1F0F;
+  --color-sidebar-primary: #9A5A2E;
+  --color-sidebar-primary-foreground: #FFFFFF;
+  --color-sidebar-accent: #FFF1E8;
+  --color-sidebar-accent-foreground: #3E1F0F;
+  --color-sidebar-border: #E8D5C4;
+  --color-sidebar-ring: #D39A6A;
+
+  --color-copper-50: #FFF8F2;
+  --color-copper-100: #FFF1E8;
+  --color-copper-200: #E8D5C4;
+  --color-copper-300: #D39A6A;
+  --color-copper-400: #C47D4A;
+  --color-copper-500: #9A5A2E;
+  --color-copper-600: #7A4A24;
+  --color-copper-700: #5A3518;
+  --color-copper-800: #3E1F0F;
+  --color-copper-900: #2A1509;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
