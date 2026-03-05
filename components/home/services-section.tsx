@@ -1,43 +1,42 @@
-import Link from "next/link"
-import { ArrowRight, BarChart3, Sprout, Shield, Monitor, Truck, Globe } from "lucide-react"
+import { ArrowRight, Plane, GraduationCap, FileText, BookOpen, Stamp, Briefcase } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 
 const services = [
   {
-    icon: BarChart3,
-    title: "Gestion & Finances",
-    description: "Business plan, audit financier, conseil strategique et accompagnement des entrepreneurs pour une croissance durable.",
-    href: "/services#gestion-finances",
+    icon: Plane,
+    title: "Visa Touristique",
+    description: "Facilitation de visa pour les Emirats Arabes Unis, la Chine, l'Espace Schengen, la Turquie, le Canada et les USA.",
+    href: "#visa",
   },
   {
-    icon: Sprout,
-    title: "Agri-business",
-    description: "Projets d'elevage, pisciculture et agriculture durable. Solutions innovantes pour le secteur agro-alimentaire en RDC.",
-    href: "/services#agri-business",
+    icon: GraduationCap,
+    title: "Bourses d'Etudes",
+    description: "Accompagnement complet pour obtenir des bourses d'etudes en Chine, Japon, Turquie et Canada.",
+    href: "#bourses",
   },
   {
-    icon: Shield,
-    title: "Protection Humanitaire",
-    description: "Consultance ONG, assistance aux communautes vulnerables et formations specialisees pour un impact social positif.",
-    href: "/services#protection",
+    icon: FileText,
+    title: "Traduction de Documents",
+    description: "Traduction certifiee anglais-francais de vos bulletins, diplomes, actes de naissance et autres documents officiels.",
+    href: "#traduction",
   },
   {
-    icon: Monitor,
-    title: "Solutions Numeriques",
-    description: "Developpement d'applications, cybersecurite et materiel informatique Danaisha. Transformation digitale sur mesure.",
-    href: "/services#solutions-numeriques",
+    icon: BookOpen,
+    title: "Passeport RDC",
+    description: "Facilitation et accompagnement pour l'obtention de votre passeport congolais dans les meilleurs delais.",
+    href: "#traduction",
   },
   {
-    icon: Truck,
-    title: "Logistique",
-    description: "Solutions logistiques completes pour entreprises et communautes. Chaine d'approvisionnement optimisee.",
-    href: "/services#logistique",
+    icon: Stamp,
+    title: "Legalisation",
+    description: "Legalisation de tous vos documents officiels aupres des autorites competentes.",
+    href: "#traduction",
   },
   {
-    icon: Globe,
-    title: "Services de Mobilite",
-    description: "E-passeport, e-visa, mise en relation internationale et organisation d'evenements professionnels.",
-    href: "/services#mobilite",
+    icon: Briefcase,
+    title: "Business Plan",
+    description: "Elaboration professionnelle de statuts d'entreprise et plans d'affaires pour vos projets.",
+    href: "#business-plan",
   },
 ]
 
@@ -46,24 +45,24 @@ export function ServicesSection() {
     <section className="bg-background py-20 lg:py-28" id="services">
       <div className="mx-auto max-w-7xl px-4 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <span className="text-sm font-semibold uppercase tracking-wider text-primary">
-            Nos Expertises
+          <span className="inline-block rounded-full bg-gold-500/10 px-4 py-1.5 text-sm font-semibold uppercase tracking-wider text-gold-600">
+            Nos Services
           </span>
-          <h2 className="mt-3 font-serif text-3xl font-bold text-foreground sm:text-4xl text-balance">
-            Six secteurs strategiques au service de votre reussite
+          <h2 className="mt-4 font-serif text-3xl font-bold text-foreground sm:text-4xl text-balance">
+            Des solutions completes pour toutes vos demarches
           </h2>
           <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
-            Une approche multidisciplinaire unique en RDC pour repondre a tous vos besoins professionnels.
+            Solutions Optimales vous accompagne dans vos projets de visa, bourses, traduction, legalisation et business plan.
           </p>
         </div>
 
         <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (
-            <Link key={service.title} href={service.href} className="group">
-              <Card className="h-full border-border bg-card transition-all duration-300 hover:border-accent hover:shadow-lg">
+            <a key={service.title} href={service.href} className="group">
+              <Card className="h-full border-border bg-card transition-all duration-300 hover:border-gold-400 hover:shadow-lg hover:-translate-y-1">
                 <CardContent className="p-6">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-secondary">
-                    <service.icon className="h-6 w-6 text-primary" />
+                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-navy-600">
+                    <service.icon className="h-6 w-6 text-gold-400" />
                   </div>
                   <h3 className="mt-4 text-lg font-semibold text-card-foreground">
                     {service.title}
@@ -77,7 +76,7 @@ export function ServicesSection() {
                   </div>
                 </CardContent>
               </Card>
-            </Link>
+            </a>
           ))}
         </div>
       </div>
